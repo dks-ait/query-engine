@@ -17,15 +17,18 @@
     </properties>
 
     <dependencies>
+
+
         <dependency>
             <groupId>org.jboss.teiid</groupId>
             <artifactId>teiid-runtime</artifactId>
             <version>${version.teiid}</version>
         </dependency>
         <dependency>
-            <groupId>org.jboss.teiid.connectors</groupId>
-            <artifactId>translator-odata</artifactId>
+            <groupId>org.jboss.teiid</groupId>
+            <artifactId>teiid-odata</artifactId>
             <version>${version.teiid}</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.jboss.teiid</groupId>
@@ -42,7 +45,11 @@
             <artifactId>translator-ws</artifactId>
             <version>${version.teiid}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.jboss.teiid.connectors</groupId>
+            <artifactId>translator-hbase</artifactId>
+            <version>${version.teiid}</version>
+        </dependency>
         <dependency>
             <groupId>org.jboss.teiid.connectors</groupId>
             <artifactId>connector-ws</artifactId>
@@ -73,6 +80,19 @@
             <artifactId>ddcloud-jdbc-driver</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        
+        <dependency>
+			<groupId>org.codehaus.btm</groupId>
+			<artifactId>btm</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+        
+
+        <!--   <dependency>
+               <groupId>com.datadirect.connectivity</groupId>
+               <artifactId>postgresql-jdbc-driver</artifactId>
+               <version>1.0-SNAPSHOT</version>
+           </dependency>-->
 
         <dependency>
             <groupId>org.jboss.jbossts</groupId>
@@ -86,7 +106,6 @@
             </exclusions>
         </dependency>
 
-
     </dependencies>
 
     <build>
@@ -96,8 +115,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
         </plugins>
