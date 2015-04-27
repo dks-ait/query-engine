@@ -100,7 +100,8 @@ public class SLFLogger implements org.teiid.logging.Logger {
 
     @Override
     public void putMdc(String key, String val) {
-        MDC.put(key, val);
+    	if(val!=null)
+    		MDC.put(key, val);
     }
 
     @Override
